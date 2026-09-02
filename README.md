@@ -5,9 +5,9 @@
 - Student: Diego Huentecura
 - Course: Bioinformática e investigación reproducible para análisis genómicos
 - Program: Doctorado en Ciencias Farmacéuticas
-- Date: 02 de septiembre de 2026
+- Date: September 2, 2026
 
 --- 
 
 ### Repository Objective
-This assignment repository includes the activities required for*session 2*. The four activities from the session are organized within the respective *assignment* folders.
+This assignment repository includes the activities required for *session 2*. The four activities from the session are organized within the respective *assignment* folders.
