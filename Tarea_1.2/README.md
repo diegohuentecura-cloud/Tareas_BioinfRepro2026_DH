@@ -1,5 +1,9 @@
 ## Tarea 1.2
 
+> **Important:** The file **`Tarea_1.2.md`** was created because the original content of this activity was previously stored in the **`README.md`** file. The information was not modified; it was simply copied from **`README.md`** and transferred to **`Tarea_1.2.md`** in order to better organize the activity files.
+
+
+
 ---
 
 - Professor: Ricardo Verdugo
