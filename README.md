@@ -1,6 +1,13 @@
 # Tareas_BioinfRepro2026_DH
-Repositorio para las tareas del curso :D
+## Tarea 1
 ---
-Es mi primera vez utilizando esta página, Me llamo Diego 
+- Professor: Ricardo Verdugo
+- Student: Diego Huentecura
+- Course: Bioinformática e investigación reproducible para análisis genómicos
+- Program: Doctorado en Ciencias Farmacéuticas
+- Date: 02 de septiembre de 2026
 
-Aqui voy a dejar mis *tareas* y *actividades*
+--- 
+
+### Repository Objective
+This assignment repository includes the activities required for*session 2*. The four activities from the session are organized within the respective *assignment* folders.
