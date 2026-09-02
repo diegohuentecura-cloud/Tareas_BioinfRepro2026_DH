@@ -7,7 +7,7 @@ Se completó la tarea con éxito al modificarla en la copia local del repositori
 
 ## Pantallazo 1: Incorporación de los cambios
 En la siguiente imagen se evidencia los cambios realizados en el archivo
-![Página modificada](Pantallazo 1.png)
+![Página modificada](Pantallazo%201.png)
 ## Pantallazo 2: Revisión de los cambios
 
 Aquí se muestran los cambios realizados en el editor de Markdown.
