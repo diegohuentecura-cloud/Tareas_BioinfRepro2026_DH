@@ -12,3 +12,8 @@
 This folder contains the file `ejercicio_6.R`, which includes the code developed for Exercise 6 of the activity.
 
 The activity was completed using R.
+
+### Conclusion
+This exercise helped me understand how for loops can be used in a more complex analysis, where different files and calculations are processed automatically.
+
+This can be applied in genetic and population studies, for example, to compare genetic differentiation with geographic or resistance distances. It is relevant because automation makes it easier to analyze several datasets in a consistent way and reduces repetitive manual work.
