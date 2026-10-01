@@ -47,7 +47,7 @@ scp bioinfo1@genoma.med.uchile.cl:dhuentecura/S3*_fastqc.html .
 ```
 ### 2.4 Analisis y comparación de los archivos
 
-#### Análisis comparativo de calidad de R1 antes y después del filtrado
+#### 2.4.1 Análisis comparativo de calidad de R1 antes y después del filtrado
 
 Se compararon los resultados de FastQC de `S3_R1_fastqc.html` y `S3_R1_filter_fastqc.html` para ver qué cambios ocurrieron después del filtrado.
 
@@ -61,7 +61,7 @@ También hubo parámetros que no mejoraron. `Per sequence GC content` y `Sequenc
 
 En general, el filtrado mejoró la calidad de R1, principalmente por la eliminación de adaptadores y la mejora en la composición de bases. Sin embargo, todavía quedaron algunas alertas que no fueron corregidas con este proceso.
 
-#### Análisis comparativo de calidad de R2 antes y después del filtrado
+#### 2.4.2 Análisis comparativo de calidad de R2 antes y después del filtrado
 
 También se compararon los resultados de `S3_R2_fastqc.html` y `S3_R2_filter_fastqc.html`.
 
