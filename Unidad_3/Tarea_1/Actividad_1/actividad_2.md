@@ -191,3 +191,13 @@ Antes del filtrado, tanto R1 como R2 tenían lecturas de 251 pb y este módulo o
 En general, el filtrado mejoró varios parámetros de calidad. El cambio más claro se observó en R2, donde la calidad por base pasó de `WARNING` a `PASS`. También se observó una mejora en la composición de bases por posición y en la eliminación de adaptadores tanto en R1 como en R2.
 
 Como consecuencia del trimming, disminuyó el número de reads y las secuencias quedaron con diferentes longitudes. A pesar de estas mejoras, algunos parámetros de FastQC, como la duplicación, las secuencias sobrerrepresentadas y la distribución de GC, siguieron mostrando algunas alertas.
+
+## Conclusión general
+
+En esta tarea aprendí a trabajar de manera más práctica con archivos de secuenciación y a entender mejor la información que contienen los archivos FASTQ. A partir de comandos de Unix pude revisar las secuencias, contar el número de reads, identificar la estructura de una lectura y relacionar los símbolos de calidad con sus valores PHRED. También pude trabajar con el archivo de regiones blanco para identificar las regiones y genes presentes.
+
+Además, el uso de FastQC permitió observar de forma gráfica la calidad de las secuencias R1 y R2 y comparar los datos crudos con los datos podados. Esta comparación permitió entender mejor el efecto del filtrado, ya que se eliminaron adaptadores y regiones de menor calidad, aunque también disminuyó el número de reads y se generaron secuencias de diferentes longitudes. Los valores de reads calculados manualmente coincidieron con los informados por FastQC, lo que permitió comprobar que el procedimiento realizado con los comandos de Unix fue correcto.
+
+Durante el desarrollo de la tarea se utilizaron varios comandos revisados en clases, como `head`, `tail`, `wc`, `grep` y el uso de pipes (`|`). Sin embargo, también fue necesario buscar algunas herramientas adicionales que no aparecían en los ejemplos revisados, como `zcat`, que permitió trabajar con archivos comprimidos `.gz`, y `sort -u`, que permitió obtener una lista de genes sin repeticiones. También se revisaron otras alternativas para resolver algunos pasos, lo que ayudó a comprender que en bioinformática muchas veces existen diferentes formas de llegar a un mismo resultado.
+
+En general, esta tarea me permitió no solo ejecutar comandos, sino también comprender mejor para qué sirven, cómo se relacionan con los datos de secuenciación y cómo buscar nuevas herramientas cuando los comandos vistos en clase no son suficientes para resolver un problema.
