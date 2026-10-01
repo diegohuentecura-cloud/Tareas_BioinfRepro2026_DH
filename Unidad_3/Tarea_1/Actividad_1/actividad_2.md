@@ -110,4 +110,84 @@ FastQC permite complementar este análisis, ya que no revisa solo una lectura, s
 En general, los resultados calculados manualmente son coherentes con los obtenidos mediante FastQC. El número de reads coincide exactamente y los valores de calidad PHRED observados en las primeras bases también son compatibles con la buena calidad mostrada en los informes de FastQC.
 
 
+### 2.6 Comparación de las principales figuras de calidad
 
+Para comparar la calidad de las secuencias crudas y podadas de R1 y R2 se seleccionaron cuatro análisis principales de FastQC: calidad por base, contenido de bases por posición, contenido de adaptadores y distribución de la longitud de las secuencias.
+
+## 2.6 Comparación de las principales figuras de calidad
+
+Para comparar la calidad de las secuencias crudas y podadas de R1 y R2 se seleccionaron cuatro análisis principales de FastQC: calidad por base, contenido de bases por posición, contenido de adaptadores y distribución de la longitud de las secuencias.
+
+### 6.1 Calidad por base
+
+#### R1 crudo
+![Calidad por base R1 crudo](CAL-S1-RAW.png)
+
+#### R1 filtrado
+![Calidad por base R1 filtrado](CAL-S1-FIL.png)
+
+#### R2 crudo
+![Calidad por base R2 crudo](CAL-S2-RAW.png)
+
+#### R2 filtrado
+![Calidad por base R2 filtrado](CAL-S2-FIL.png)
+
+**Interpretación:**  
+En R1 crudo la calidad por base ya era buena y obtuvo `PASS`, resultado que se mantuvo después del filtrado. En cambio, R2 crudo presentó una mayor disminución de la calidad hacia el final de las lecturas, por lo que obtuvo `WARNING`. Después del filtrado, R2 pasó a `PASS`, lo que muestra que el trimming permitió eliminar o recortar principalmente las regiones de menor calidad.
+
+### 6.2 Contenido de bases por posición
+
+#### R1 crudo
+![Contenido de bases R1 crudo](BAS-S1-RAW.png)
+
+#### R1 filtrado
+![Contenido de bases R1 filtrado](BAS-S1-FIL.png)
+
+#### R2 crudo
+![Contenido de bases R2 crudo](BAS-S2-RAW.png)
+
+#### R2 filtrado
+![Contenido de bases R2 filtrado](BAS-S2-FIL.png)
+
+**Interpretación:**  
+En las secuencias crudas se observaron algunas diferencias en la proporción de A, T, C y G según la posición dentro del read. R1 crudo presentó `WARNING`, mientras que R2 crudo presentó `FAIL`. Después del filtrado, ambos archivos pasaron a `PASS`, mostrando una composición de bases más estable a lo largo de las lecturas.
+
+### 6.3 Contenido de adaptadores
+
+#### R1 crudo
+![Contenido de adaptadores R1 crudo](ADAP-S1-RAW.png)
+
+#### R1 filtrado
+![Contenido de adaptadores R1 filtrado](ADAP-S1-FIL.png)
+
+#### R2 crudo
+![Contenido de adaptadores R2 crudo](ADAP-S2-RAW.png)
+
+#### R2 filtrado
+![Contenido de adaptadores R2 filtrado](ADAP-S2-FIL.png)
+
+Interpretación:
+Tanto R1 como R2 crudos presentaron `FAIL` por la presencia de secuencias correspondientes a adaptadores, principalmente hacia el final de los reads. Después del filtrado, ambos pasaron a `PASS`, lo que muestra que el proceso de poda fue efectivo para eliminar gran parte de los adaptadores presentes en las secuencias originales.
+
+### 6.4 Distribución de longitud de las secuencias
+
+#### R1 crudo
+![Distribución de longitud R1 crudo](LAR-S1-RAW.png)
+
+#### R1 filtrado
+![Distribución de longitud R1 filtrado](LAR-S1-FIL.png)
+
+#### R2 crudo
+![Distribución de longitud R2 crudo](LAR-S2-RAW.png)
+
+#### R2 filtrado
+![Distribución de longitud R2 filtrado](LAR-S2-FIL.png)
+
+Interpretación: 
+Antes del filtrado, tanto R1 como R2 tenían lecturas de 251 pb y este módulo obtuvo `PASS`. Después del trimming, las secuencias quedaron con longitudes variables entre 35 y 251 pb, por lo que el resultado cambió a `WARNING`. Esto es esperable, ya que no todas las lecturas fueron recortadas en la misma cantidad.
+
+### Conclusión
+
+En general, el filtrado mejoró varios parámetros de calidad. El cambio más claro se observó en R2, donde la calidad por base pasó de `WARNING` a `PASS`. También se observó una mejora en la composición de bases por posición y en la eliminación de adaptadores tanto en R1 como en R2.
+
+Como consecuencia del trimming, disminuyó el número de reads y las secuencias quedaron con diferentes longitudes. A pesar de estas mejoras, algunos parámetros de FastQC, como la duplicación, las secuencias sobrerrepresentadas y la distribución de GC, siguieron mostrando algunas alertas.
